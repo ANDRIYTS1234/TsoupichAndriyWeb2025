@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <!-- Заголовок сторінки у вкладці браузера -->
+    <title>Форма додавання викладача</title>
+</head>
+<body>
+    <!-- заголовок першого рівня -->
+    <h1>Додати викладача</h1>
+    <!-- інтерактивний елемент, що дозволяє користувачам вводити дані
+     method - атрибут який вказує спосіб передачі даних,  
+     для створення або оновлення ресурсів використовується  Post -->
+    <form method="POST">
+
+        <label for="full_name">Повне ім’я:</label><br>
+        <!-- атрибут for вказує на id, з яким пов'язаний лейбл -->
+        <input type="text" id="full_name" name="full_name"><br><br>
+
+        <label>Стать:</label><br>
+        <!--це працює через атрибут name-->
+        <input type="radio" id="male" name="gender" value="чоловіча">
+        <label for="male">Чоловіча</label>
+        <input type="radio" id="female" name="gender" value="жіноча">
+        <label for="female">Жіноча</label><br><br>
+
+        <label for="birth_date">Дата народження:</label><br>
+        <input type="date" id="birth_date" name="birth_date"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="phone">Телефон:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="bg_color">Бажаний колір фону:</label><br>
+
+        <input type="color" id="bg_color" name="bg_color"><br><br>
+
+        <label for="country">Країна:</label><br>
+        <!--створює випадаючий список, з якого можна вибрати один або кілька варіантів-->
+        <select id="country" name="country">
+            <!--окрема опція випадаючого списку,  
+            value - атрибут який передає значення на сервер при виборі якоїсь опції-->
+            <option value="Україна">Україна</option>
+            <option value="США">США</option>
+            <option value="Польща">Польща</option>
+            <option value="Німеччина">Німеччина</option>
+            <option value="Франція">Франція</option>
+        </select><br><br>
+
+        <label for="city">Місто:</label><br>
+        <input type="text" id="city" name="city"><br><br>
+
+        <label for="comment">Коментар:</label><br>
+        <!--тег для багаторядкового текстового поля-->
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+            
+        <button type="submit" name="action" value="add_teacher">Додати викладача</button>
+    </form>
+</body>
+</html>
